@@ -1,0 +1,22 @@
+            <div className="h-full absolute -z-50 w-screen bg-black"></div>
+            <NavBar getShowProposal={getShowProposal} />
+            {showProposal ? <div className="mx-[12%]">
+                <HeroSection currentProposal={currentProposal} />
+                <div className={divider}></div>
+                <div className="">
+                    <RoundProfileSection showProposal={setShowProposal} addProposal={getAddProposal} />
+
+                </div>
+                
+                <div className="gird place-items-center">
+
+                    <FourCardsSection />
+                </div>
+            </div> : (
+                <div className="grid place-items-center mt-20">
+                    {/* <Instructions /> */}
+                </div>
+            )}
+            <div className="bg-black">
+                <img className="absolute top-[80%] object-contain  -z-40" src={bgImg} alt="bg img" />
+            </div>
